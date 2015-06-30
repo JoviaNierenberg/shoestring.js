@@ -8,6 +8,9 @@ body {
     color: grey;
   }
 }
+.fa {
+	transform: none;
+}
 .navbar {
 	height: 50px;
 	margin-top: 0px;
@@ -55,8 +58,15 @@ body {
   width: 95%; /* new */
   clear: both;
 }
+@mixin clearfix(){
+	&::before, &::after{
+		content: '';
+		display: block;
+		clear: both;
+	};
+}
 .row {
-  clear: both;
+  @include clearfix();
 }
 .jumbotron {
 	margin-top: -50px; /* new */
@@ -213,3 +223,4 @@ body {
 .list-unstyled{
 	text-decoration: none;
 }
+
