@@ -1,0 +1,38 @@
+@for $n from 1 through 12 {
+		.col-lg-#{$n} {
+			width: percentage($n/13.1);
+			margin: .75%;
+		  display: inline-block;
+		  vertical-align: top;
+		  box-sizing: border-box;
+		}
+	}
+
+
+/* Smaller */
+@media 
+  (max-width: 992px)  {
+  	@for $n from 1 through 12 {
+		.col-md-#{$n} {
+			width: percentage($n/12.6);
+			margin: .75%;
+		  display: inline-block;
+		  vertical-align: top;
+		  box-sizing: border-box;
+		}
+	}
+}
+
+/*Smallest*/
+@media 
+  (max-width: 500px)  {
+  	@for $n from 1 through 12 {
+		.col-sm-#{$n} {
+			width: percentage($n/12.6);
+			margin: .75%;
+		  display: inline-block;
+		  vertical-align: top;
+		  box-sizing: border-box;
+		}
+	}
+}
